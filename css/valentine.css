@@ -7,30 +7,32 @@ body {
     overflow: hidden;
 }
 
+.answer-button {
+    margin-bottom: 90px;
+    justify-content: center;
+}
+
 img {
-    height: 400px;
-    width: auto;
-    padding: 10px;
+    width: 50%;
+    max-width: 300px;
 }
 
 #valentine-question {
     font-size: 50px;
-    margin-bottom: 10px;
 }
 
 .answer-button {
     padding: 10px 20px;
     font-size: 18px;
-    cursor: pointer;    /* how to change into heart? */
+    cursor: pointer;
     margin: 10px;
+    margin-top: 0;
     font-family: "Courier";
-    margin-bottom: 20px;
     background-color: #ffe3e1;
     color: #e67373;
     border-radius: 12px;
     border: 2px solid #ffe3e1;
     box-shadow: 1px 1px 2px #ff9494;
-    /* transition: 0.3s; */
 }
 
 .answer-button:hover{
@@ -38,4 +40,74 @@ img {
     color: #ffe3e1;
     border: 2px solid #ff9494;
     box-shadow: 1px 1px 2px #ffe3e1;
+}
+
+/* portrait orientation */
+@media screen and (orientation: portrait) {
+    img {
+        width: 60%;
+        max-width: 300px;
+    }
+
+    #valentine-question {
+        font-size: 40px;
+    }
+
+    .answer-button {
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+}
+
+/* landscape orientation */
+@media screen and (orientation: landscape) {
+    img {
+        width: 40%;
+        max-width: 450px;
+    }
+
+    #valentine-question {
+        font-size: 45px;
+    }
+
+    .answer-button {
+        font-size: 18px;
+        padding: 12px 20px;
+        margin-bottom: 30px;
+    }
+}
+
+/* portrait and smaller screens */
+@media screen and (max-width: 768px) and (orientation: portrait) {
+    img {
+        width: 70%;
+    }
+
+    #valentine-question {
+        font-size: 35px;
+    }
+
+    .answer-button {
+        font-size: 14px;
+        padding: 8px 12px;
+        margin-bottom: 30px;
+    }
+}
+
+/* landscape and larger screens */
+@media screen and (min-width: 1024px) and (orientation: landscape) {
+    img {
+        width: 30%;
+        max-width: 400px;
+    }
+
+    #valentine-question {
+        font-size: 50px;
+    }
+
+    .answer-button {
+        font-size: 20px;
+        padding: 15px 25px;
+        margin-bottom: 30px;
+    }
 }

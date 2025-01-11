@@ -12,12 +12,11 @@ body {
     margin-bottom: 20px;
 }
 
-.rizz {
+#rizz {
     margin-bottom: 10px;
-    width: 25%;
 }
 
-.button {
+.next-button {
     padding: 10px 20px;
     font-size: 18px;
     cursor: pointer;
@@ -29,18 +28,78 @@ body {
     border-radius: 12px;
     border: 2px solid #ffe3e1;
     box-shadow: 1px 1px 2px #ff9494;
-    transition: 0.3s;
 }
 
-.button:hover {
+.next-button:hover{
     background-color: #ff9494;
     color: #ffe3e1;
     border: 2px solid #ff9494;
     box-shadow: 1px 1px 2px #ffe3e1;
 }
 
-@media (max-width: 768px) {
-    .rizz {
-        width: 20%;
+/* portrait orientation */
+@media screen and (orientation: portrait) {
+    img {
+        width: 60%;
+        max-width: 600px;
+    }
+
+    #thankyou {
+        font-size: 40px;
+    }
+
+    .next-button {
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+}
+
+/* landscape orientation */
+@media screen and (orientation: landscape) {
+    img {
+        width: 40%;
+        max-width: 450px;
+    }
+
+    #thankyou {
+        font-size: 45px;
+    }
+
+    .next-button {
+        font-size: 18px;
+        padding: 12px 20px;
+    }
+}
+
+/* portrait and smaller screens */
+@media screen and (max-width: 768px) and (orientation: portrait) {
+    img {
+        width: 70%;
+    }
+
+    #thankyou {
+        font-size: 35px;
+    }
+
+    .next-button {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}
+
+/* landscape and larger screens */
+@media screen and (min-width: 1024px) and (orientation: landscape) {
+    img {
+        width: 30%;
+        max-width: 400px;
+    }
+
+    #thankyou {
+        font-size: 50px;
+    }
+
+    .next-button {
+        font-size: 20px;
+        padding: 15px 25px;
     }
 }

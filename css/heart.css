@@ -1,0 +1,119 @@
+body {
+    text-align: center;
+    margin-top: 30px;
+    font-family: "Courier";
+    background-color: #fff5e4;
+    color: #ff9494;
+    overflow: hidden;
+}
+
+.responsive {
+    margin-bottom: 10px;
+}
+
+#heart-button {
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 10px;
+    font-family: "Courier";
+    margin-top: 2%;
+    margin-bottom: 20px;
+    background-color: #ffe3e1;
+    color: #e67373;
+    border-radius: 12px;
+    border: 2px solid #ffe3e1;
+    box-shadow: 1px 1px 2px #ff9494;
+    transition: 0.3s;
+}
+
+#heart-button:hover {
+    background-color: #ff9494;
+    color: #ffe3e1;
+    border: 2px solid #ff9494;
+    box-shadow: 1px 1px 2px #ffe3e1;
+}
+
+#heart-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.heart {
+    animation: floatUp 3s ease-in-out forwards;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+}
+
+@keyframes floatUp {
+    0% {
+        opacity: 1;
+        transform: translateY(0) rotate(0deg);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-700px) rotate(0deg);
+    }
+}
+
+/* portrait orientation */
+@media screen and (orientation: portrait) {
+    img {
+        width: 60%;
+        max-width: 300px;
+    }
+
+    .heart-button {
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+}
+
+/* landscape orientation */
+@media screen and (orientation: landscape) {
+    img {
+        width: 40%;
+        max-width: 450px;
+    }
+
+    .heart-button {
+        font-size: 18px;
+        padding: 12px 20px;
+    }
+}
+
+/* portrait and smaller screens */
+@media screen and (max-width: 768px) and (orientation: portrait) {
+    img {
+        width: 70%;
+        max-width: 600px;
+    }
+
+    #heart-button {
+        font-size: 20px;
+        padding: 8px 12px;
+        margin-top: 50px;
+    }
+
+    .heart {
+        animation: floatUp 3s ease-in-out forwards;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+    }
+}
+
+/* landscape and larger screens */
+@media screen and (min-width: 1024px) and (orientation: landscape) {
+    img {
+        width: 40%;
+        max-width: 500px;
+    }
+
+    #heart-button {
+        font-size: 20px;
+        padding: 15px 25px;
+    }
+}
