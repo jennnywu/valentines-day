@@ -11,6 +11,10 @@ body {
     margin-bottom: 10px;
 }
 
+#valentines-day {
+    font-size: 50px;
+}
+
 #heart-button {
     padding: 10px 20px;
     font-size: 18px;
@@ -65,6 +69,10 @@ body {
         max-width: 300px;
     }
 
+    #valentines-day {
+        font-size: 40px;
+    }
+
     .heart-button {
         font-size: 16px;
         padding: 10px 15px;
@@ -78,6 +86,10 @@ body {
         max-width: 450px;
     }
 
+    #valentines-day {
+        font-size: 45px;
+    }
+
     .heart-button {
         font-size: 18px;
         padding: 12px 20px;
@@ -89,6 +101,12 @@ body {
     img {
         width: 70%;
         max-width: 600px;
+        margin-top: 35px;
+    }
+
+    #valentines-day {
+        font-size: 30px;
+        margin-top: 40px;
     }
 
     #heart-button {
@@ -109,7 +127,12 @@ body {
 @media screen and (min-width: 1024px) and (orientation: landscape) {
     img {
         width: 40%;
-        max-width: 500px;
+        max-width: 450px;
+        margin-top: 30px;
+    }
+
+    #valentines-day {
+        font-size: 50px;
     }
 
     #heart-button {
